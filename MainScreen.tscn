@@ -1,3 +1,63 @@
-[gd_scene format=3 uid="uid://bl6jp4ep55q53"]
+[gd_scene load_steps=6 format=3 uid="uid://bl6jp4ep55q53"]
+
+[ext_resource type="Texture2D" uid="uid://n6anmmdgipm4" path="res://icon.svg" id="1_cshku"]
+[ext_resource type="Script" uid="uid://mx2cbk5g8ous" path="res://icon.gd" id="2_453mu"]
+[ext_resource type="Script" uid="uid://d2x0n0ldt47bp" path="res://icon_3.gd" id="2_i8u74"]
+[ext_resource type="Script" uid="uid://djeolnt6s3yry" path="res://dataManager.gd" id="4_453mu"]
+[ext_resource type="Script" uid="uid://b1jn2oua6prhv" path="res://button.gd" id="5_7pmop"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(124, 485)
+texture = ExtResource("1_cshku")
+script = ExtResource("2_453mu")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(305, 208)
+texture = ExtResource("1_cshku")
+script = ExtResource("2_i8u74")
+
+[node name="DataManager" type="Node" parent="."]
+script = ExtResource("4_453mu")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 21.0
+offset_top = 34.0
+offset_right = 157.0
+offset_bottom = 170.0
+icon = ExtResource("1_cshku")
+script = ExtResource("5_7pmop")
+metadata/_edit_use_anchors_ = true
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = 107.0
+offset_top = 643.0
+offset_right = 392.0
+offset_bottom = 674.0
+item_count = 3
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+
+[node name="OptionButton2" type="OptionButton" parent="."]
+offset_left = 106.0
+offset_top = 789.0
+offset_right = 391.0
+offset_bottom = 820.0
+item_count = 3
+popup/item_0/text = "a"
+popup/item_0/id = 0
+popup/item_1/text = "b"
+popup/item_1/id = 1
+popup/item_2/text = "c"
+popup/item_2/id = 2
+
+[connection signal="button_down" from="Button" to="Icon" method="_on_button_button_down"]
+[connection signal="button_down" from="Button" to="Icon3" method="_on_button_button_down" binds= [Color(0.479069, 0.79842, 3.85046e-07, 1)]]
+[connection signal="button_up" from="Button" to="Icon" method="_on_button_button_up"]
+[connection signal="button_up" from="Button" to="Icon3" method="_on_button_button_up"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

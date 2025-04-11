@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="Chuva Segura"
+run/main_scene="uid://bl6jp4ep55q53"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=540
+window/size/viewport_height=960
+window/stretch/mode="viewport"
+window/handheld/orientation=1
 
 [rendering]
 
