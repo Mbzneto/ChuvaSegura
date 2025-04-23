@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://d32q7xuej573a"]
+
+[ext_resource type="Texture2D" uid="uid://bb2bf642hr13n" path="res://arrow.png" id="1_o12hk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kyyy7"]
+bg_color = Color(0.972549, 0.960784, 0.941176, 1)
+
+[resource]
+OptionButton/colors/font_color = Color(0.333333, 0.027451, 0.996078, 1)
+OptionButton/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+OptionButton/colors/font_focus_color = Color(0.0862745, 0.317647, 0.996078, 1)
+OptionButton/colors/font_hover_color = Color(0.0862745, 0.317647, 0.996078, 1)
+OptionButton/colors/font_hover_pressed_color = Color(0.0862745, 0.317647, 0.996078, 1)
+OptionButton/colors/font_pressed_color = Color(0.0862745, 0.317647, 0.996078, 1)
+OptionButton/font_sizes/font_size = 26
+OptionButton/icons/arrow = ExtResource("1_o12hk")
+OptionButton/styles/disabled = SubResource("StyleBoxFlat_kyyy7")
+OptionButton/styles/disabled_mirrored = SubResource("StyleBoxFlat_kyyy7")
+OptionButton/styles/focus = SubResource("StyleBoxFlat_kyyy7")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_kyyy7")
+OptionButton/styles/hover_mirrored = SubResource("StyleBoxFlat_kyyy7")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_kyyy7")
+OptionButton/styles/normal_mirrored = SubResource("StyleBoxFlat_kyyy7")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_kyyy7")
+OptionButton/styles/pressed_mirrored = null
