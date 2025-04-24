@@ -5,7 +5,6 @@ signal pressedLinha(data)
 var data = []
 var OptionButtona
 var OptionButton2
-var DataManager
 
 func _ready() -> void:
 	OptionButtona = get_node("../OptionButton")
@@ -13,6 +12,7 @@ func _ready() -> void:
 
 
 func _on_pressed() -> void:
-	data = [OptionButtona.get_item_text(OptionButtona.selected), OptionButton2.get_item_text(OptionButton2.selected)]
-	print(data)
-	pressedLinha.emit(data)
+	if OptionButtona.item_count > 0 and OptionButton2.item_count > 0:
+		data = [OptionButtona.get_item_text(OptionButtona.selected), OptionButton2.get_item_text(OptionButton2.selected)]
+		if data[0] != "" and data[1] != "":
+			pressedLinha.emit(data)

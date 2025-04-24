@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsu0nrtwi1308"]
+
+[ext_resource type="Script" uid="uid://b6bk5boxdmdxu" path="res://linha.gd" id="1_4mjjw"]
+[ext_resource type="FontFile" uid="uid://fxlm6o11a3u8" path="res://fonts/Pacifico-Regular.ttf" id="1_x1vvp"]
+[ext_resource type="Theme" uid="uid://d32q7xuej573a" path="res://temadosmenu.tres" id="2_byt74"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mjjw"]
+bg_color = Color(0.854902, 0.854902, 0.854902, 1)
+
+[node name="Control" type="Control" node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(352, 80)
+layout_mode = 3
+anchor_right = 0.652
+anchor_bottom = 0.083
+offset_right = -0.0800171
+offset_bottom = 0.319992
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_4mjjw")
+label = NodePath("Label")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4mjjw")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_byt74")
+theme_override_colors/font_color = Color(0.333333, 0.027451, 0.996078, 1)
+theme_override_fonts/font = ExtResource("1_x1vvp")
+theme_override_font_sizes/font_size = 24
+text = "AAAAAAAA"
+horizontal_alignment = 1
+vertical_alignment = 1
