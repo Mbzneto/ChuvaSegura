@@ -6,7 +6,7 @@
 bg_color = Color(0.972549, 0.960784, 0.941176, 1)
 
 [resource]
-OptionButton/colors/font_color = Color(0.333333, 0.027451, 0.996078, 1)
+OptionButton/colors/font_color = Color(0.0862745, 0.317647, 0.996078, 1)
 OptionButton/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 OptionButton/colors/font_focus_color = Color(0.0862745, 0.317647, 0.996078, 1)
 OptionButton/colors/font_hover_color = Color(0.0862745, 0.317647, 0.996078, 1)
