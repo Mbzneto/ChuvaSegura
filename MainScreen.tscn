@@ -1,63 +1,386 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl6jp4ep55q53"]
+[gd_scene load_steps=15 format=3 uid="uid://bl6jp4ep55q53"]
 
-[ext_resource type="Texture2D" uid="uid://n6anmmdgipm4" path="res://icon.svg" id="1_cshku"]
-[ext_resource type="Script" uid="uid://mx2cbk5g8ous" path="res://icon.gd" id="2_453mu"]
-[ext_resource type="Script" uid="uid://d2x0n0ldt47bp" path="res://icon_3.gd" id="2_i8u74"]
+[ext_resource type="Texture2D" uid="uid://c4hpu74p8ceej" path="res://cptm.png" id="4_6maps"]
 [ext_resource type="Script" uid="uid://djeolnt6s3yry" path="res://dataManager.gd" id="4_453mu"]
+[ext_resource type="Script" uid="uid://chx48legt1la6" path="res://stationData.gd" id="5_6maps"]
 [ext_resource type="Script" uid="uid://b1jn2oua6prhv" path="res://button.gd" id="5_7pmop"]
+[ext_resource type="FontFile" uid="uid://fxlm6o11a3u8" path="res://fonts/Pacifico-Regular.ttf" id="5_lple0"]
+[ext_resource type="Script" uid="uid://chx0f33v7wqrg" path="res://option_button.gd" id="6_b26h7"]
+[ext_resource type="Theme" uid="uid://d32q7xuej573a" path="res://temadosmenu.tres" id="6_kyyy7"]
+[ext_resource type="Script" uid="uid://nlgsxoi4tj4" path="res://button_2.gd" id="7_0elsd"]
+[ext_resource type="Texture2D" uid="uid://bs2vnhspaoefr" path="res://tela.png" id="7_6maps"]
+[ext_resource type="Script" uid="uid://cxfvdwapsoj1h" path="res://option_button_2.gd" id="7_a8wb5"]
+[ext_resource type="StyleBox" uid="uid://d0idnhpoe6d74" path="res://temaovrdosbotao.tres" id="7_lple0"]
+[ext_resource type="Resource" uid="uid://dpgt1je51cg16" path="res://data.tres" id="9_aycgk"]
+
+[sub_resource type="Resource" id="Resource_aycgk"]
+script = ExtResource("5_6maps")
+stationData = {
+"1 - Azul": {
+"Ana Rosa": 0,
+"Armênia": 0,
+"Carandiru": 0,
+"Conceição": 0,
+"Jabaquara": 0,
+"Jardim São Paulo-Ayrton Senna": 0,
+"Liberdade": 0,
+"Luz": 0,
+"Parada Inglesa": 0,
+"Paraíso": 0,
+"Portuguesa-Tietê": 0,
+"Praça da Árvore": 0,
+"Santa Cruz": 0,
+"Santana": 0,
+"Saúde": 0,
+"São Bento": 0,
+"São Joaquim": 0,
+"São Judas": 0,
+"Sé": 0,
+"Tiradentes": 0,
+"Tucuruvi": 0,
+"Vergueiro": 0,
+"Vila Mariana": 0
+},
+"10 - Turquesa": {
+"Brás": 0,
+"Capuava": 0,
+"Guapituba": 0,
+"Ipiranga": 0,
+"Juventus-Mooca": 0,
+"Mauá": 0,
+"Prefeito Saladino": 0,
+"Ribeirão Pires": 0,
+"Rio Grande da Serra": 0,
+"Santo André - Prefeito Celso Daniel": 0,
+"São Caetano do Sul - Prefeito Walter Braido": 0,
+"Tamanduateí": 0,
+"Utinga": 0
+},
+"11 - Coral": {
+"Antonio Gianetti Neto": 0,
+"Brás": 0,
+"Brás Cubas": 0,
+"Calmon Viana": 0,
+"Corinthians-Itaquera": 0,
+"Dom Bosco": 0,
+"Estudantes": 0,
+"Ferraz de Vasconcelos": 0,
+"Guaianases": 0,
+"José Bonifácio": 0,
+"Jundiapeba": 0,
+"Luz": 0,
+"Mogi das Cruzes": 0,
+"Poá": 0,
+"Suzano": 0,
+"Tatuapé": 0
+},
+"12 - Safira": {
+"Aracaré": 0,
+"Brás": 0,
+"Calmon Viana": 0,
+"Comendador Ermelino": 0,
+"Engenheiro Goulart": 0,
+"Engenheiro Manoel Feio": 0,
+"Itaim Paulista": 0,
+"Itaquaquecetuba": 0,
+"Jardim Helena - Vila Mara": 0,
+"Jardim Romano": 0,
+"São Miguel Paulista": 0,
+"Tatuapé": 0,
+"USP Leste": 0
+},
+"13 - Jade": {
+"Aeroporto-Guarulhos": 0,
+"Engenheiro Goulart": 0,
+"Guarulhos - Cecap": 0
+},
+"15 - Prata": {
+"Camilo Haddad": 0,
+"Fazenda da Juta": 0,
+"Jardim Colonial": 0,
+"Jardim Planalto": 0,
+"Oratório": 0,
+"Sapopemba": 0,
+"São Lucas": 0,
+"São Mateus": 0,
+"Vila Prudente": 0,
+"Vila Tolstói": 0,
+"Vila União": 0
+},
+"17 - Ouro": {
+"Campo Belo": 0,
+"Chucri Zaidan": 0,
+"Morumbi": 0,
+"Vila Cordeiro": 0
+},
+"2 - Verde": {
+"Alto do Ipiranga": 0,
+"Ana Rosa": 0,
+"Brigadeiro": 0,
+"Chácara Klabin": 0,
+"Clínicas": 0,
+"Consolação": 0,
+"Paraíso": 0,
+"Sacomã": 0,
+"Santos-Imigrantes": 0,
+"Santuário Nossa Senhora de Fátima-Sumaré": 0,
+"Tamanduateí": 0,
+"Trianon-Masp": 0,
+"Vila Madalena": 0,
+"Vila Prudente": 0
+},
+"3 - Vermelha": {
+"Anhangabaú": 0,
+"Artur Alvim": 0,
+"Belém": 0,
+"Bresser-Mooca": 0,
+"Brás": 0,
+"Carrão-Assaí Atacadista": 0,
+"Corinthians-Itaquera": 0,
+"Guilhermina-Esperança": 0,
+"Marechal Deodoro": 0,
+"Palmeiras-Barra Funda": 0,
+"Patriarca-Vila Ré": 0,
+"Pedro II": 0,
+"Penha": 0,
+"República": 0,
+"Santa Cecília": 0,
+"Sé": 0,
+"Tatuapé": 0,
+"Vila Matilde": 0
+},
+"4 - Amarela": {
+"Butantã": 0,
+"Faria Lima": 0,
+"Higienópolis-Mackenzie": 0,
+"Luz": 0,
+"Paulista": 0,
+"Pinheiros": 0,
+"República": 0,
+"São Paulo-Morumbi": 0,
+"Vila Sônia": 0
+},
+"5 - Lilás": {
+"AACD-Servidor": 0,
+"Adolfo Pinheiro": 0,
+"Alto da Boa Vista": 0,
+"Borba Gato": 0,
+"Brooklin": 0,
+"Campo Belo": 0,
+"Campo Limpo": 0,
+"Capão Redondo": 0,
+"Chácara Klabin": 0,
+"Eucaliptos": 0,
+"Giovanni Gronchi": 0,
+"Hospital São Paulo": 0,
+"Largo Treze": 0,
+"Moema": 0,
+"Santa Cruz": 0,
+"Santo Amaro": 0,
+"Vila das Belezas": 0
+},
+"7 - Rubi": {
+"Baltazar Fidelis": 0,
+"Botujuru": 0,
+"Caieiras": 0,
+"Campo Limpo Paulista": 0,
+"Francisco Morato": 0,
+"Franco da Rocha": 0,
+"Jaraguá": 0,
+"Jundiaí": 0,
+"Lapa": 0,
+"Luz": 0,
+"Palmeiras-Barra Funda": 0,
+"Perus": 0,
+"Piqueri": 0,
+"Pirituba": 0,
+"Vila Aurora": 0,
+"Vila Clarice": 0,
+"Várzea Paulista": 0,
+"Água Branca": 0
+},
+"8 - Diamante": {
+"Amador Bueno": 0,
+"Barueri": 0,
+"Carapicuíba": 0,
+"Comandante Sampaio": 0,
+"Domingos de Moraes": 0,
+"Engenheiro Cardoso": 0,
+"General Miguel Costa": 0,
+"Imperatriz Leopoldina": 0,
+"Itapevi": 0,
+"Jandira": 0,
+"Jardim Belval": 0,
+"Jardim Silveira": 0,
+"Júlio Prestes": 0,
+"Lapa": 0,
+"Osasco": 0,
+"Palmeiras-Barra Funda": 0,
+"Presidente Altino": 0,
+"Quitaúna": 0,
+"Sagrado Coração": 0,
+"Santa Rita": 0,
+"Santa Terezinha": 0
+},
+"9 - Esmeralda": {
+"Autódromo": 0,
+"Berrini": 0,
+"Ceasa": 0,
+"Cidade Jardim": 0,
+"Cidade Universitária": 0,
+"Grajaú": 0,
+"Granja Julieta": 0,
+"Hebraica-Rebouças": 0,
+"Interlagos": 0,
+"João Dias": 0,
+"Jurubatuba": 0,
+"Mendes-Vila Natal": 0,
+"Morumbi": 0,
+"Osasco": 0,
+"Pinheiros": 0,
+"Presidente Altino": 0,
+"Primavera-Interlagos": 0,
+"Santo Amaro": 0,
+"Socorro": 0,
+"Varginha": 0,
+"Vila Olímpia": 0,
+"Villa-Lobos–Jaguaré": 0
+}
+}
+metadata/_custom_type_script = "uid://chx48legt1la6"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0elsd"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(124, 485)
-texture = ExtResource("1_cshku")
-script = ExtResource("2_453mu")
-
-[node name="Icon3" type="Sprite2D" parent="."]
-position = Vector2(305, 208)
-texture = ExtResource("1_cshku")
-script = ExtResource("2_i8u74")
-
 [node name="DataManager" type="Node" parent="."]
 script = ExtResource("4_453mu")
+sData = SubResource("Resource_aycgk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 538.0
+offset_bottom = 954.0
+texture = ExtResource("7_6maps")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 57.0
+offset_top = 226.0
+offset_right = 491.0
+offset_bottom = 560.0
+texture = ExtResource("4_6maps")
+expand_mode = 1
 
 [node name="Button" type="Button" parent="."]
-offset_left = 21.0
-offset_top = 34.0
-offset_right = 157.0
-offset_bottom = 170.0
-icon = ExtResource("1_cshku")
+offset_left = 80.0
+offset_top = 792.0
+offset_right = 272.0
+offset_bottom = 912.0
+theme_override_colors/font_disabled_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/icon_normal_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_outline_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_focus_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_pressed_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_fonts/font = ExtResource("5_lple0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0elsd")
+text = "Post"
 script = ExtResource("5_7pmop")
-metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 288.0
+offset_top = 792.0
+offset_right = 480.0
+offset_bottom = 912.0
+theme_override_colors/font_disabled_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/icon_normal_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_outline_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_focus_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_colors/font_pressed_color = Color(0.101961, 0.101961, 0.501961, 1)
+theme_override_fonts/font = ExtResource("5_lple0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_0elsd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0elsd")
+text = "Info"
+script = ExtResource("7_0elsd")
 
 [node name="OptionButton" type="OptionButton" parent="."]
-offset_left = 107.0
-offset_top = 643.0
-offset_right = 392.0
-offset_bottom = 674.0
-item_count = 3
-popup/item_0/text = "1"
-popup/item_0/id = 0
-popup/item_1/text = "2"
-popup/item_1/id = 1
-popup/item_2/text = "3"
-popup/item_2/id = 2
+offset_left = 87.0
+offset_top = 620.0
+offset_right = 480.0
+offset_bottom = 679.0
+theme = ExtResource("6_kyyy7")
+theme_override_styles/focus = ExtResource("7_lple0")
+theme_override_styles/disabled_mirrored = ExtResource("7_lple0")
+theme_override_styles/disabled = ExtResource("7_lple0")
+theme_override_styles/hover_pressed_mirrored = ExtResource("7_lple0")
+theme_override_styles/hover_pressed = ExtResource("7_lple0")
+theme_override_styles/hover_mirrored = ExtResource("7_lple0")
+theme_override_styles/hover = ExtResource("7_lple0")
+theme_override_styles/pressed_mirrored = ExtResource("7_lple0")
+theme_override_styles/pressed = ExtResource("7_lple0")
+theme_override_styles/normal_mirrored = ExtResource("7_lple0")
+theme_override_styles/normal = ExtResource("7_lple0")
+script = ExtResource("6_b26h7")
+sData = ExtResource("9_aycgk")
 
 [node name="OptionButton2" type="OptionButton" parent="."]
-offset_left = 106.0
-offset_top = 789.0
-offset_right = 391.0
-offset_bottom = 820.0
-item_count = 3
-popup/item_0/text = "a"
-popup/item_0/id = 0
-popup/item_1/text = "b"
-popup/item_1/id = 1
-popup/item_2/text = "c"
-popup/item_2/id = 2
+offset_left = 84.0
+offset_top = 708.0
+offset_right = 482.0
+offset_bottom = 765.0
+theme = ExtResource("6_kyyy7")
+theme_override_constants/outline_size = 0
+theme_override_styles/focus = ExtResource("7_lple0")
+theme_override_styles/disabled_mirrored = ExtResource("7_lple0")
+theme_override_styles/disabled = ExtResource("7_lple0")
+theme_override_styles/hover_pressed_mirrored = ExtResource("7_lple0")
+theme_override_styles/hover_pressed = ExtResource("7_lple0")
+theme_override_styles/hover_mirrored = ExtResource("7_lple0")
+theme_override_styles/hover = ExtResource("7_lple0")
+theme_override_styles/pressed_mirrored = ExtResource("7_lple0")
+theme_override_styles/pressed = ExtResource("7_lple0")
+theme_override_styles/normal_mirrored = ExtResource("7_lple0")
+theme_override_styles/normal = ExtResource("7_lple0")
+script = ExtResource("7_a8wb5")
+sData = ExtResource("9_aycgk")
 
-[connection signal="button_down" from="Button" to="Icon" method="_on_button_button_down"]
-[connection signal="button_down" from="Button" to="Icon3" method="_on_button_button_down" binds= [Color(0.479069, 0.79842, 3.85046e-07, 1)]]
-[connection signal="button_up" from="Button" to="Icon" method="_on_button_button_up"]
-[connection signal="button_up" from="Button" to="Icon3" method="_on_button_button_up"]
+[connection signal="dataStart" from="DataManager" to="OptionButton" method="_on_data_manager_data_start"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="item_selected" from="OptionButton" to="OptionButton" method="_on_item_selected"]
+[connection signal="selectedLine" from="OptionButton" to="OptionButton2" method="_on_option_button_selected_line"]

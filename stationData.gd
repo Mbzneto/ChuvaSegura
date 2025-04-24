@@ -2,7 +2,7 @@ extends Resource
 
 class_name StationData
 
-var stationData = {
+@export var stationData = {
 	"1 - Azul": {
 		"Jabaquara": 0,
 		"Conceição": 0,
@@ -234,3 +234,6 @@ var stationData = {
 		"Campo Belo": 0
 	}
 }
+
+func report(data) -> void:
+	stationData[data[0]][data[1]] += 1
