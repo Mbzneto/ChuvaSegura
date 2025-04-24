@@ -41,7 +41,6 @@ offset_bottom = 754.0
 script = ExtResource("7_a8wb5")
 sData = ExtResource("9_aycgk")
 
-[connection signal="dataStart" from="DataManager" to="OptionButton" method="_on_data_manager_data_start"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="item_selected" from="OptionButton" to="OptionButton" method="_on_item_selected"]
 [connection signal="selectedLine" from="OptionButton" to="OptionButton2" method="_on_option_button_selected_line"]
