@@ -11,8 +11,13 @@ func _ready() -> void:
 	Buttona.pressedLinha.connect(_save_data)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	jsonData = {"1":{"a":0, "b":0}, "2":{"a":0, "b":0}}
 	dataStart.emit(sData.stationData)
+=======
+	userData = StationData.new()
+	dataStart.emit(userData.stationData)
+>>>>>>> Stashed changes
 =======
 	userData = StationData.new()
 	dataStart.emit(userData.stationData)
