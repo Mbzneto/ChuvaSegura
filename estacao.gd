@@ -9,7 +9,6 @@ var text : String
 func setVars(colorState, stationText) -> void: 
 	state = colorState
 	text = stationText
-	
 	var style:StyleBoxFlat = StyleBoxFlat.new()
 	style.corner_radius_bottom_left = 126
 	style.corner_radius_bottom_right = 126
@@ -28,7 +27,7 @@ func setVars(colorState, stationText) -> void:
 	else:
 		print("RED")
 		style.bg_color = Color.RED
-		#color = Color.RED
+		#color = Color.REDr.RED)
 	colorRect.add_theme_stylebox_override ("panel", style)
 	# colorRect.add_theme_color_override("panel", color)
 	label.set_text(text)

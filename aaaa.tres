@@ -103,7 +103,7 @@ stationData = {
 "Vila Cordeiro": 0
 },
 "2 - Verde": {
-"Alto do Ipiranga": 0,
+"Alto do Ipiranga": 1,
 "Ana Rosa": 0,
 "Brigadeiro": 0,
 "Chácara Klabin": 0,
@@ -120,7 +120,7 @@ stationData = {
 },
 "3 - Vermelha": {
 "Anhangabaú": 0,
-"Artur Alvim": 0,
+"Artur Alvim": 1,
 "Belém": 0,
 "Bresser-Mooca": 0,
 "Brás": 0,
@@ -147,7 +147,7 @@ stationData = {
 "Pinheiros": 0,
 "República": 0,
 "São Paulo-Morumbi": 0,
-"Vila Sônia": 3
+"Vila Sônia": 0
 },
 "5 - Lilás": {
 "AACD-Servidor": 0,

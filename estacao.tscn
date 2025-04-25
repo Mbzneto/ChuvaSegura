@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd8rt228ao04r"]
+[gd_scene load_steps=6 format=3 uid="uid://bd8rt228ao04r"]
 
 [ext_resource type="Theme" uid="uid://d32q7xuej573a" path="res://temadosmenu.tres" id="1_8mt8x"]
 [ext_resource type="Script" uid="uid://csk2e1cbol5eb" path="res://estacao.gd" id="1_ad64j"]
@@ -12,10 +12,17 @@ corner_radius_bottom_left = 126
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5fos"]
 bg_color = Color(0, 1, 0, 1)
-corner_radius_top_left = 126
-corner_radius_top_right = 126
-corner_radius_bottom_right = 126
-corner_radius_bottom_left = 126
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
+[sub_resource type="FontFile" id="FontFile_itlwe"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [node name="Estacao" type="Control" node_paths=PackedStringArray("colorRect", "label")]
 custom_minimum_size = Vector2(352, 64)
@@ -45,32 +52,26 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_itlwe")
 
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p5fos")
+
 [node name="Label" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.205
-anchor_top = 0.25
-anchor_right = 0.955
-anchor_bottom = 0.752
-offset_left = -0.160004
-offset_right = -0.160004
-offset_bottom = -0.128002
+layout_mode = 0
+offset_left = 72.0
+offset_top = 16.0
+offset_right = 336.0
+offset_bottom = 48.0
 theme = ExtResource("1_8mt8x")
 theme_type_variation = &"TooltipLabel"
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("FontFile_itlwe")
 text = "AAAAAAA"
 vertical_alignment = 1
-
-[node name="Panel" type="Panel" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.023
-anchor_top = 0.127
-anchor_right = 0.159
-anchor_bottom = 0.877
-offset_left = -0.0559921
-offset_top = 0.0319996
-offset_right = 0.0720062
-offset_bottom = 0.0319977
-theme_override_styles/panel = SubResource("StyleBoxFlat_p5fos")
+autowrap_mode = 3

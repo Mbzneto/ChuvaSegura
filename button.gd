@@ -5,6 +5,7 @@ signal pressedLinha(data)
 var data = []
 var OptionButtona
 var OptionButton2
+var DataManager
 
 func _ready() -> void:
 	OptionButtona = get_node("../OptionButton")
