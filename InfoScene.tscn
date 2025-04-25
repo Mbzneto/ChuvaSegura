@@ -1,0 +1,189 @@
+[gd_scene load_steps=8 format=3 uid="uid://ntq1c3wbpg1s"]
+
+[ext_resource type="Theme" uid="uid://d32q7xuej573a" path="res://temadosmenu.tres" id="1_4eyjv"]
+[ext_resource type="Script" uid="uid://bkstev6r2c8g3" path="res://back_button.gd" id="2_u2vy8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5dql"]
+bg_color = Color(0.854902, 0.854902, 0.854902, 1)
+
+[sub_resource type="FontFile" id="FontFile_4eyjv"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2vy8"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4eyjv"]
+bg_color = Color(1, 1, 0, 1)
+corner_radius_top_left = 126
+corner_radius_top_right = 126
+corner_radius_bottom_right = 126
+corner_radius_bottom_left = 126
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8tqie"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 126
+corner_radius_top_right = 126
+corner_radius_bottom_right = 126
+corner_radius_bottom_left = 126
+
+[node name="InfoScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o5dql")
+
+[node name="Label" type="Label" parent="Panel"]
+offset_left = 192.0
+offset_top = 320.0
+offset_right = 464.0
+offset_bottom = 384.0
+theme = ExtResource("1_4eyjv")
+theme_type_variation = &"TooltipLabel"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_4eyjv")
+theme_override_font_sizes/font_size = 36
+text = "Menos de 5"
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.235
+anchor_right = -0.059
+anchor_bottom = 0.875
+offset_left = -0.0799942
+offset_top = 8.0
+offset_right = 0.0479851
+offset_bottom = -6.48499e-05
+theme_override_styles/panel = SubResource("StyleBoxFlat_u2vy8")
+
+[node name="Label2" type="Label" parent="Panel"]
+offset_left = 192.0
+offset_top = 432.0
+offset_right = 464.0
+offset_bottom = 496.0
+theme = ExtResource("1_4eyjv")
+theme_type_variation = &"TooltipLabel"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_4eyjv")
+theme_override_font_sizes/font_size = 36
+text = "Entre 5 e 15
+"
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel/Label2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.235
+anchor_right = -0.059
+anchor_bottom = 0.875
+offset_left = -0.0799942
+offset_top = 8.0
+offset_right = 0.0479851
+offset_bottom = -6.48499e-05
+theme_override_styles/panel = SubResource("StyleBoxFlat_4eyjv")
+
+[node name="Label3" type="Label" parent="Panel"]
+offset_left = 192.0
+offset_top = 552.0
+offset_right = 464.0
+offset_bottom = 616.0
+theme = ExtResource("1_4eyjv")
+theme_type_variation = &"TooltipLabel"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_4eyjv")
+theme_override_font_sizes/font_size = 36
+text = "Mais de 15
+"
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel/Label3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.235
+anchor_right = -0.059
+anchor_bottom = 0.875
+offset_left = -0.0799942
+offset_top = 8.0
+offset_right = 0.0479851
+offset_bottom = -6.48499e-05
+theme_override_styles/panel = SubResource("StyleBoxFlat_8tqie")
+
+[node name="Label4" type="Label" parent="Panel"]
+offset_left = 24.0
+offset_top = 728.0
+offset_right = 512.0
+offset_bottom = 884.0
+theme = ExtResource("1_4eyjv")
+theme_type_variation = &"TooltipLabel"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_4eyjv")
+theme_override_font_sizes/font_size = 36
+text = "Valores relativos à quantidade de relatos na última hora
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.237
+anchor_top = 0.15
+anchor_right = 0.77
+anchor_bottom = 0.247
+offset_left = 0.019989
+offset_right = 0.199982
+offset_bottom = -0.12001
+theme = ExtResource("1_4eyjv")
+theme_override_font_sizes/font_size = 48
+text = "Legenda"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 0.017
+anchor_right = 0.963
+anchor_bottom = 0.117
+offset_top = -0.320002
+offset_right = -0.0200195
+offset_bottom = -0.320007
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.385493, 0.385492, 0.385492, 1)
+theme_override_font_sizes/font_size = 64
+text = "✕"
+script = ExtResource("2_u2vy8")
+
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]

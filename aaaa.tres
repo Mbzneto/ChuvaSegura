@@ -20,7 +20,7 @@ stationData = {
 "Praça da Árvore": 0,
 "Santa Cruz": 0,
 "Santana": 0,
-"Saúde": 1,
+"Saúde": 0,
 "São Bento": 0,
 "São Joaquim": 0,
 "São Judas": 0,
@@ -72,7 +72,7 @@ stationData = {
 "Engenheiro Manoel Feio": 0,
 "Itaim Paulista": 0,
 "Itaquaquecetuba": 0,
-"Jardim Helena - Vila Mara": 1,
+"Jardim Helena - Vila Mara": 0,
 "Jardim Romano": 0,
 "São Miguel Paulista": 0,
 "Tatuapé": 0,
@@ -103,7 +103,7 @@ stationData = {
 "Vila Cordeiro": 0
 },
 "2 - Verde": {
-"Alto do Ipiranga": 0,
+"Alto do Ipiranga": 1,
 "Ana Rosa": 0,
 "Brigadeiro": 0,
 "Chácara Klabin": 0,
@@ -120,7 +120,7 @@ stationData = {
 },
 "3 - Vermelha": {
 "Anhangabaú": 0,
-"Artur Alvim": 0,
+"Artur Alvim": 1,
 "Belém": 0,
 "Bresser-Mooca": 0,
 "Brás": 0,
@@ -144,7 +144,7 @@ stationData = {
 "Higienópolis-Mackenzie": 0,
 "Luz": 0,
 "Paulista": 0,
-"Pinheiros": 1,
+"Pinheiros": 0,
 "República": 0,
 "São Paulo-Morumbi": 0,
 "Vila Sônia": 0

@@ -1,7 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://bd8rt228ao04r"]
+[gd_scene load_steps=6 format=3 uid="uid://bd8rt228ao04r"]
 
 [ext_resource type="Theme" uid="uid://d32q7xuej573a" path="res://temadosmenu.tres" id="1_8mt8x"]
 [ext_resource type="Script" uid="uid://csk2e1cbol5eb" path="res://estacao.gd" id="1_ad64j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_itlwe"]
+bg_color = Color(0.964706, 0.956863, 0.929412, 1)
+corner_radius_top_left = 126
+corner_radius_top_right = 126
+corner_radius_bottom_right = 126
+corner_radius_bottom_left = 126
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5fos"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
+[sub_resource type="FontFile" id="FontFile_itlwe"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [node name="Estacao" type="Control" node_paths=PackedStringArray("colorRect", "label")]
 custom_minimum_size = Vector2(352, 64)
@@ -19,23 +40,27 @@ grow_vertical = 2
 pivot_offset = Vector2(176, 32)
 size_flags_horizontal = 4
 script = ExtResource("1_ad64j")
-colorRect = NodePath("ColorRect2/ColorRect")
-label = NodePath("ColorRect2/Label")
+colorRect = NodePath("Panel/Panel")
+label = NodePath("Panel/Label")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_right = 352.0
-offset_bottom = 64.0
-color = Color(0.963661, 0.956389, 0.931513, 1)
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_itlwe")
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect2"]
+[node name="Panel" type="Panel" parent="Panel"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 56.0
-color = Color(0, 1, 0, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_p5fos")
 
-[node name="Label" type="Label" parent="ColorRect2"]
+[node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 16.0
@@ -44,4 +69,9 @@ offset_bottom = 48.0
 theme = ExtResource("1_8mt8x")
 theme_type_variation = &"TooltipLabel"
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("FontFile_itlwe")
 text = "AAAAAAA"
+vertical_alignment = 1
+autowrap_mode = 3

@@ -1,44 +1,210 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7ahxbh7s32hc"]
+[gd_scene load_steps=19 format=3 uid="uid://c7ahxbh7s32hc"]
 
 [ext_resource type="Texture2D" uid="uid://bs2vnhspaoefr" path="res://tela.png" id="1_1vxpl"]
+[ext_resource type="Theme" uid="uid://d32q7xuej573a" path="res://temadosmenu.tres" id="1_iahd4"]
 [ext_resource type="Script" uid="uid://cvg4uhc3ot738" path="res://container_estacoes.gd" id="2_dapye"]
+[ext_resource type="Script" uid="uid://dbqjrtkgy5utc" path="res://home_button.gd" id="4_6jemg"]
+[ext_resource type="Script" uid="uid://dihlt8qtdeh24" path="res://info_button.gd" id="5_tjyr0"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iahd4"]
+bg_color = Color(0.854902, 0.854902, 0.854902, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
 
-[node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = -1
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jemg"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tjyr0"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2k4vt"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpb51"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fkqfi"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vofy"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3jq5"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mljai"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gk0u0"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4klur"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eajnt"]
+bg_color = Color(0.701961, 0.85098, 0.960784, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="FontFile" id="FontFile_iahd4"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+
+[node name="Linhas" type="Control"]
+layout_mode = 3
+anchor_right = 0.993
+anchor_bottom = 1.0
+offset_right = -536.22
+offset_bottom = -960.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource("1_1vxpl")
 expand_mode = 1
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 72.0
-offset_top = 104.0
-offset_right = 472.0
-offset_bottom = 896.0
-color = Color(0.856067, 0.856067, 0.856067, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(352, 64)
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.178
-anchor_top = 0.217
-anchor_right = 0.83
-anchor_bottom = 0.9
-offset_left = -0.120003
-offset_top = -0.320007
-offset_right = -0.200012
-offset_bottom = -6.10352e-05
-grow_horizontal = 2
-grow_vertical = 2
+anchor_left = 0.133
+anchor_top = 0.108
+anchor_right = 0.874
+anchor_bottom = 0.937
+offset_left = 0.18
+offset_top = 0.32
+offset_right = 0.039978
+offset_bottom = 0.47998
+theme_override_styles/panel = SubResource("StyleBoxFlat_iahd4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer"]
+custom_minimum_size = Vector2(400, 750)
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 112)
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 112)
+layout_mode = 2
+theme = ExtResource("1_iahd4")
+theme_override_font_sizes/font_size = 56
+text = "Reports"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 680)
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(400, 680)
+layout_mode = 2
+theme_override_constants/margin_bottom = 15
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/ScrollContainer/MarginContainer2"]
+custom_minimum_size = Vector2(400, 680)
+layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 script = ExtResource("2_dapye")
+metadata/_edit_lock_ = true
 
-[node name="Linhas" type="Control" parent="."]
-layout_mode = 3
-anchor_right = 0.8
-anchor_bottom = 0.358
-offset_right = -432.0
-offset_bottom = -343.68
+[node name="HomeButton" type="Button" parent="CanvasLayer"]
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 104.0
+offset_bottom = 96.0
+theme = ExtResource("1_iahd4")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/focus = SubResource("StyleBoxFlat_6jemg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_tjyr0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_2k4vt")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bpb51")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_fkqfi")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0vofy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y3jq5")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mljai")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gk0u0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_4klur")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eajnt")
+text = "⌂"
+script = ExtResource("4_6jemg")
+
+[node name="InfoButton" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.222
+anchor_top = 0.033
+anchor_right = 0.326
+anchor_bottom = 0.092
+offset_left = 0.119987
+offset_top = 0.32
+offset_right = -0.0400085
+offset_bottom = -0.320007
+theme = ExtResource("1_iahd4")
+theme_override_fonts/font = SubResource("FontFile_iahd4")
+theme_override_font_sizes/font_size = 26
+text = "?"
+script = ExtResource("5_tjyr0")
+
+[connection signal="pressed" from="CanvasLayer/HomeButton" to="CanvasLayer/HomeButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/InfoButton" to="CanvasLayer/InfoButton" method="_on_pressed"]

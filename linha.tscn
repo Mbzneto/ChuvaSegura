@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxbnuysmktl1e"]
+
+[ext_resource type="Script" uid="uid://tyjvv8y72b42" path="res://linha.gd" id="1_4mjjw"]
+[ext_resource type="Theme" uid="uid://d32q7xuej573a" path="res://temadosmenu.tres" id="1_x1vvp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xk31q"]
+bg_color = Color(0.854902, 0.854902, 0.854902, 1)
+
+[node name="Linha" type="Control" node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(352, 64)
+layout_mode = 3
+anchor_right = 0.652
+anchor_bottom = 0.108
+offset_right = -0.0800171
+offset_bottom = 0.32
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4mjjw")
+label = NodePath("Label")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xk31q")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_x1vvp")
+theme_override_font_sizes/font_size = 36
+text = "LINHA"
+horizontal_alignment = 1
+vertical_alignment = 1
